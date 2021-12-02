@@ -1,7 +1,9 @@
 import random as rand
 
+matrix = [[]]
+
 def print_matrix():
-  for row in matrix():
+  for row in matrix:
     newstr_arr = str(row).split(',')
     newstr = ''
     for item in newstr_arr:
@@ -9,10 +11,9 @@ def print_matrix():
     print(newstr)
 
 
-def main():
-  matrix = [[]]
-  for n in range(5):
-    for m in range(5):
+def main(x):
+  for n in range(x):
+    for m in range(x):
       matrix[n].append(0)
     matrix.append([])
   matrix.pop()
@@ -31,5 +32,11 @@ def main():
   print()
 
 
+def create_matrix():
+  print('Enter N:')
+  n = input()
+  main(int(n))
+
+
 if __name__ == '__main__':
-  main()
+  create_matrix()
